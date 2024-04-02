@@ -1,9 +1,6 @@
 package org.cydeo.model;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -21,35 +18,43 @@ public class Employee {
 //    @NotBlank -> @NotNull + @NotEmpty + @NotBlank
 
 
-    @NotEmpty
+    @NotBlank
     @Size(max = 12, min = 2)
     private String firstName;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Size(max = 12, min = 2)
     private String lastName;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Email
     private String email;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,}")
     private String password;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Size(max = 12, min = 2)
     private String address;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Size(max = 12, min = 2)
     private String address2;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Size(max = 12, min = 2)
     private String city;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Size(max = 12, min = 2)
     private String state;
-    @NotEmpty
-    @Size(max = 12, min = 2)
+
+//    @NotBlank
+//    @Size(max = 12, min = 2)
     private String zipCode;
 
 }
